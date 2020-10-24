@@ -38,6 +38,7 @@ for i in range(len(train_loader_list)):
 
 
     for epoch in range(EPOCHS):
+        total_loss = 0
         for batch_i, (feature,label,_) in enumerate(train_loader_list[i]):
             feature = feature.to(device) #[5,1024,320]
             label = label.to(device) #[5,320]
